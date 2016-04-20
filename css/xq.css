@@ -1,0 +1,367 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+font-family: inherit;
+font-weight: 500;
+line-height: 1.1;
+color: inherit;
+}
+.sparkley {
+  background: #3e5771;
+  color: white;
+  border: none;
+  font-weight: normal;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+  box-shadow: 0 38px 32px -23px black;
+  margin: 0 1em 1em;
+  margin-top: 20px;
+  font-size: 110%;
+  cursor: pointer;
+}
+.sparkley:hover {
+  background: #2c3e50;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+html {
+  text-align: center;
+  color: #DDDDDD;
+  min-height: 100%;
+  /*background-color: #FFF7F7;*/
+  background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22) 10%, rgba(138, 114, 76, 0) 40%), 
+			  -moz-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), 
+			  -moz-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22) 10%, rgba(138, 114, 76, 0) 40%), 
+			  -webkit-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), 
+			  -webkit-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -o-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22) 10%, rgba(138, 114, 76, 0) 40%), 
+			  -o-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), 
+			  -o-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22) 10%, rgba(138, 114, 76, 0) 40%), 
+			  -ms-linear-gradient(top, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), 
+			  -ms-linear-gradient(-45deg, #670d10 0%, #092756 100%);
+  background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(35, 24, 82, 0.22) 10%, rgba(138, 114, 76, 0) 40%), 
+			  linear-gradient(to bottom, rgba(57, 173, 219, 0.25) 0%, rgba(42, 60, 87, 0.4) 100%), 
+			  linear-gradient(135deg, #670d10 0%, #092756 100%);
+}
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+html,body,#container{
+	width: 100%;
+	height: 100%;
+}
+body{
+	-webkit-user-select:none;
+	-moz-user-select:-moz-none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-khtml-user-select:none;/*早期浏览器*/
+	user-select:none;
+	overflow: hidden;
+	font: 14px/1.5 "Microsoft Yahei", "Hiragino Sans GB", Helvetica, "Helvetica Neue", "微软雅黑", Tahoma, Arial, sans-serif;
+}
+#canvas{
+	display: block;
+	margin:0 auto;
+}
+.slideshow_container{
+	background-color: #fff;
+}
+code {
+	opacity: 0.7;
+	white-space: nowrap;
+	padding: 0 7px;
+	background: rgba(0,0,0,0.08);
+}
+#container{
+	font-size: 20px;
+	display: none;
+}
+.image_panel{
+   margin: 0.1rem;
+   width: 100%;
+}
+#side_btn_ul {
+	list-style: none;
+	padding: 0;
+	position: absolute;
+	float: right;
+	right: 10px;
+	top: 50%;
+	margin-top: -70px;
+	z-index: 999;
+	-webkit-animation:sideMenu 700ms ease 300ms both;
+	-moz-animation:sideMenu 700ms ease 300ms both;
+	-o-animation:sideMenu 700ms ease 300ms both;
+	-ms-animation:sideMenu 700ms ease 300ms both;
+	animation:sideMenu 700ms ease 300ms both;
+}
+#side_btn_ul li {
+	background-position: -370px -197px;
+	width: 9px;
+	height: 9px;
+	padding: 7px;
+	margin: 0;
+	opacity: 0.5;
+}
+.pic {
+	background-image: url("../images/isguidex.png");
+	display: block;
+}
+#side_btn_ul .active {
+	background-position: -346px -197px;
+	width: 9px;
+	height: 9px;
+	opacity: 1;
+}
+#side_btn_ul li:hover { 
+	opacity:1; 
+	cursor:pointer; 
+}
+.page{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top:0px;
+	display: none;
+	opacity: 0;
+	overflow: hidden;
+	margin: 0 auto;
+}
+.roll {
+    width: 86px;
+    position: absolute;
+    margin: 0 50%;
+    left: -43px;
+    bottom: 90px;
+}
+.rollImg {
+    top: 32px;
+    left: 15px;
+    position: absolute;
+    cursor: pointer;
+}
+.pic_10 {
+    background-position: -348px -104px;
+    width: 50px;
+    height: 50px;
+}
+.rollText, .rollImg, .roll {
+    z-index: 20;
+}
+.show .roll #rollImg1{
+	-webkit-animation:bounce 3s infinite ease-in-out;
+    -moz-animation:bounce 3s infinite ease-in-out;
+    -ms-animation:bounce 3s infinite ease-in-out;
+    -o-animation:bounce 3s infinite ease-in-out;
+    animation:bounce 3s infinite ease-in-out;
+}
+.show .roll #rollImg2{
+	-webkit-animation:bounce 3s infinite ease-in-out 1500ms;
+    -moz-animation:bounce 3s infinite ease-in-out 1500ms;
+    -ms-animation:bounce 3s infinite ease-in-out 1500ms;
+    -o-animation:bounce 3s infinite ease-in-out 1500ms;
+    animation:bounce 3s infinite ease-in-out 1500ms;
+}
+.pic {
+    background-image: url("http://s1.bdstatic.com/r/www/search/is/img/isguidex.png");
+    display: block;
+}
+/*页面出现动画*/
+.show{
+	-webkit-animation:pageShow 700ms ease 300ms both;
+	-moz-animation:pageShow 700ms ease 300ms both;
+	-ms-animation:pageShow 700ms ease 300ms both;
+	-o-animation:pageShow 700ms ease 300ms both;
+	animation:pageShow 700ms ease 300ms both;
+}
+/*页面消失*/
+.disappear{
+	-webkit-animation: pageHide 1000ms ease 0ms both;
+	-moz-animation: pageHide 1000ms ease 0ms both;
+	-ms-animation: pageHide 1000ms ease 0ms both;
+	-o-animation: pageHide 1000ms ease 0ms both;
+	animation: pageHide 1000ms ease 0ms both;
+}
+#s7.disappear{
+	-webkit-animation:s7PageHide 1500ms ease-in-out 100ms both;
+	-moz-animation: s7PageHide 1500ms ease-in-out 100ms both;
+	-ms-animation: s7PageHide 1500ms ease-in-out 100ms both;
+	-o-animation: s7PageHide 1500ms ease-in-out 100ms both;
+	animation: s7PageHide 1500ms ease-in-out 100ms both;
+}
+#s8.show{
+    -webkit-animation:s8PageShow 1000ms linear 800ms both;
+	-moz-animation:s8PageShow 1000ms linear 800ms both;
+	-ms-animation:s8PageShow 1000ms linear 800ms both;
+	-o-animation:s8PageShow 1000ms linear 800ms both;
+	animation:s8PageShow 1000ms linear 800ms both;
+}
+.image{
+	position: relative;
+}
+.show .txt{
+ color: #b55c80;
+ font-weight: bold;
+ -webkit-animation:txtAnim 1000ms ease 2000ms both;
+ display: inline-block;
+ margin: 0.1rem;
+}
+.disappear .txt{
+	color: #b55c80;
+    font-weight: bold;
+}
+.show .img1{
+	-webkit-animation:showImage1 1000ms ease 1000ms both;
+}
+.show .img2{
+	-webkit-animation:showImage2 1000ms ease 1000ms both;
+}
+.show .img3{
+	-webkit-animation:showImage3 1000ms ease 1000ms both;
+}
+.show .img4{
+	-webkit-animation:showImage4 1000ms ease 1000ms both;
+}
+.show .img5{
+	-webkit-animation:showImage5 1000ms ease 1000ms both;
+}
+.show .img6{
+	-webkit-animation:showImage1 1000ms ease 1000ms both;
+}
+.box_skitter_large{
+	margin: 20px auto;
+}
+#cirle_container{
+	position: fixed;
+	top:10px;
+	right: 0px;
+	cursor: pointer;
+	-webkit-animation:drop 1s linear 0.5s both;
+	-moz-animation:drop 1s linear 0.5s both;
+	-ms-animation:drop 1s linear 0.5s both;
+	-o-animation:drop 1s linear 0.5s both;
+	animation:drop 1s linear 0.5s both;
+	z-index: 9999;
+}
+.cirle{
+	position: absolute;
+	-webkit-animation:round 5s linear 0.5s infinite both;
+	-moz-animation:round 5s linear 0.5s infinite both;
+	-ms-animation:round 5s linear 0.5s infinite both;
+	-o-animation:round 5s linear 0.5s infinite both;
+	animation:round 5s linear 0.5s infinite both;
+	right: 10px;
+    top: 10px;
+}
+.photo{
+	width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #666;
+    position: absolute;
+    top: 24px;
+    right: 26px;
+}
+
+.page_container{
+	width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.description p{
+	margin-top: 150px;
+    color: rgb(179, 14, 172);
+    text-shadow: 2px 2px 5px #F77CC3;
+	font-size: 20px;
+}
+.marryPage{
+    background: #fff;
+    overflow:scroll;
+}
+.marry_panel{
+	width: 100%;
+    height: 500px;
+    background: #FDE2FD;
+}
+.love_time{
+	background-color: #FACCD6;
+	line-height: 180px;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 150%;
+	color:#fff;
+}
+.tz-module{
+	width: 980px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.module-title:after{
+	border-bottom: 2px solid #FACCD6;
+	content: "";
+	display: block;
+	margin: 0 auto;
+	padding-top: 16px;
+	text-align: center;
+	width: 70px;
+}
+.module-title{
+	letter-spacing: 4px;
+	color: #212121;
+	text-align: center;
+	margin-bottom: 24px;
+	line-height: 2;
+}
+.module-ct p{
+	color: #8c8c8c;
+	letter-spacing: 0.5px;
+	font-size: 18px;
+}
+.love_letter{
+	margin: 10px 0px;
+	color: #EEA0A6;
+}
+.last-tip{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	height: 100px;
+	line-height: 100px;
+	position: relative;
+	padding: 10px 0px;
+}
+.love_letter>.left{
+   float: left;
+   width: 25%;
+}
+.love_letter>.right{
+   float: left;
+   width: 70%;
+}
+.love_letter>.lov_tips{
+   
+}
+.tell-more{
+	font-size: 45px;
+}
+.slides{
+   	background: #FFFEFE;
+}

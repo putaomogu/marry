@@ -1,0 +1,58 @@
+@media screen and (max-width: 375px){
+   #container{
+	font-size: 15px;
+   }
+   #side_btn_ul{
+   	right: 0px;
+   }
+   .slideshow > nav span{
+   	 width: 0.85rem;
+     height: 0.1rem;
+   }
+   .tz-module{
+   	 width: 100%;
+   }
+   .letter section.container{
+   	width: 90%;
+   	height: 4rem;
+   	margin: 0 auto;
+   }
+   .tell-more{
+      font-size: 20px;
+   }
+   .love_time img{
+    vertical-align: middle;
+    }
+   .love_time{
+     font-weight: normal;
+     font-size: 15px;
+     line-height: 50px;
+   }
+   .last-tip span img{
+   	    vertical-align: middle;
+   }
+   .description{
+	    position: absolute!important;
+	    bottom: 0px;
+	    right: 0px;
+	    padding: 0px;
+   }
+   .description p{
+      font-size: 14px;
+      text-align: right;
+   }
+   .slides{
+   	background-color: #FDEFEF;
+   }
+   .tiltview {
+    opacity: 1!important;
+   }
+   .cirle{
+   	right: 0.1rem;
+    top: -0.1rem;
+   }
+   .photo{
+    top: 0.3rem;
+    right: 0.55rem;
+    }
+}
